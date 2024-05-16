@@ -1,4 +1,4 @@
-import { ContentType, Roles, Status } from "../utils/constants.utils";
+import { ContentType, LicenseType, Medium, Roles, SocialMediaType, Status } from "../utils/constants.utils";
 
 export interface IMessage {
     id: string;
@@ -20,6 +20,13 @@ export interface IUser {
     userId: string;
     walletAddress: string;
     conversations: IConversation[];
+    firstName: string;
+    lastName: string;
+    bio: string;
+    profileImg: string;
+    professionalTitle: string;
+    socialMediaURLs: ISocialMediaURLS[];
+    works: ICreatorWorkMetadata[][];
 }
 
 export interface IChatRequest {
@@ -35,7 +42,7 @@ export interface IChatRequest {
 }
 
 export interface ICreatorWorkMetadata {
-    creatorId: string,
+    userId: string,
     nameOfWork: string,
     dateOfCreation: Date,
     medium: "Film" | "Photo" | "Music" | "AI" | "Art" | "Other",
@@ -59,4 +66,9 @@ export interface ICreateWorkSchema {
         }
     },
     finalCID: string
+}
+
+export interface ISocialMediaURLS {
+    nameOfSocialMedia: string,
+    URLvalue: string,
 }

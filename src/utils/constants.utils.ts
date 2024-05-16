@@ -10,6 +10,9 @@ export const corsOptions: cors.CorsOptions = {
 export enum Roles { "System", "User" };
 export enum ContentType { "Text", "Image" }
 export enum Status { "Sent", "Received", "Pending" }
+export enum SocialMediaType { "Twitter", "Behance", "Instagram" }
+export enum Medium { "Film" , "Photo" , "Music" , "AI" , "Art" , "Other" }
+export enum LicenseType {"CC BY" , "CC BY-SA" , "CC-BY-NC" , "CC-BY-NC-SA" , "CC-BY-ND" , "CC-BY-NC-ND" , "CC0" , "resolutio License" , "Your own License" }
 
 //Status Codes
 export const BAD_REQUEST = 400;
