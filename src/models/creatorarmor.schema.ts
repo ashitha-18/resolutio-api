@@ -7,7 +7,7 @@ type CreatedWorkType = {
 
 export interface ICreatedWork extends CreatedWorkType {
     image: string,
-    creatorId: string,
+    userId: string,
     nameOfWork: string,
     medium: string,
     altMedium?: string
@@ -17,7 +17,7 @@ export interface ICreatedWork extends CreatedWorkType {
 }
 
 const createdWorkSchema = new Schema<ICreatedWork>({
-    creatorId: { type: String, required: true },
+    userId: { type: String, required: true },
     nameOfWork: { type: String, required: true },
     medium: { type: String, required: true },
     altMedium: { type: String },
