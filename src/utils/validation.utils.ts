@@ -10,7 +10,7 @@ export const sendChatRequestSchema = object().shape({
 });
 
 export const uploadArtWorkSchema: ObjectSchema<ICreatorWorkMetadata> = object({
-    creatorId: string().required("Creator Name is Required"),
+    userId: string().required("Creator Name is Required"),
     nameOfWork: string().required("Name of Work is Required"),
     dateOfCreation: date().required("Date of Creation is Required"),
     alternativeMedium: string(),
